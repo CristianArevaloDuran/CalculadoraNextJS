@@ -1,0 +1,22 @@
+@import url('../../root.css');
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.loadingContainer .loadingTitle {
+    font-size: 20px;
+    font-family: var(--primary-font);
+    color: var(--base-black);
+    margin: 10px 0 0 0;
+}
+
+.loadingContainer .loadingImg {
+    width: 100px;
+}
