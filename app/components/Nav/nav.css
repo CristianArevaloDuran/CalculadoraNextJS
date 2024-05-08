@@ -1,4 +1,4 @@
-@import url('../root.css');
+@import url('../../root.css');
 
 .navBtn {
     position: absolute;
@@ -39,7 +39,7 @@
 }
 
 .navBtn svg.active {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
 }
 
 /* Nav content */
@@ -57,6 +57,7 @@
     left: -10px;
     overflow: hidden;
     transition: all 0.25s;
+    pointer-events: none;
     will-change: background-color, box-shadow, top;
     opacity: 0;
     z-index: 1;
@@ -95,4 +96,10 @@
 .nav-content.active {
     left: 10px;
     opacity: 1;
+    pointer-events: all;
+}
+
+.nav-content a.active {
+    background-color: var(--primary-selected-color-1);
+    color: var(--base-white);
 }

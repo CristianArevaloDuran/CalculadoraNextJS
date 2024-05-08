@@ -1,7 +1,7 @@
-import Nav from './components/Nav';
-import layoutcss from './layout.css';
-import rootcss from './root.css';
+import Nav from './components/Nav/Nav';
 import Pokemon from './components/Pokemon/Pokemon';
+import './layout.css';
+import './root.css';
 
 export default function RootLayout({ children }) {
   return (

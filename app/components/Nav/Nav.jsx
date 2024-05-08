@@ -1,7 +1,8 @@
-'use client';
+'use client'
 
 import Link from 'next/link';
-import navcss from './nav.css';
+import './nav.css';
+import { usePathname } from 'next/navigation';
 
 function handleClick() {
     document.querySelector('.navBtn svg').classList.toggle('active');
@@ -11,7 +12,7 @@ function handleClick() {
 const links = [
     {
         name: 'Calculadora',
-        url: '/',
+        url: '/calculadora',
     },
     {
         name: 'Estadistica',
@@ -19,7 +20,11 @@ const links = [
     }
 ];
 
+
 export default function Nav() {
+    
+    const pathname = usePathname();
+
     return (
         <>
             <div className="navBtn" onClick={handleClick}>
@@ -29,7 +34,7 @@ export default function Nav() {
                 <h1>Servicios</h1>
                 {
                     links.map((link, index) => (
-                        <Link key={index} href={link.url}>{link.name}</Link>
+                        <Link key={index}  className={pathname == link.url ? 'active' : null} href={link.url}>{link.name}</Link>
                     ))
                 }
             </div>

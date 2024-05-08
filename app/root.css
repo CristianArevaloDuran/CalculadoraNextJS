@@ -15,7 +15,8 @@
     --base-black: #333333;
     --primary-color-theme-1: #AC90E9;
     --primary-active-color-theme-1: #f158f7;
-    --secondary-color-theme-1: #F9C22E;
+    --primary-selected-color-1: #F759A2;
+    --primary-color-btn-theme-1: #F75F59;
     --soft-box-shadow: 0 0 5px #00000055;
     --med-box-shadow: 0 0 10px #00000055;
     --hard-box-shadow: 0 0 15px #00000055;

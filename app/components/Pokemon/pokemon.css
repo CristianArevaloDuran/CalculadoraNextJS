@@ -1,6 +1,7 @@
 @import url('../../root.css');
 
 .pokemonContainer {
+    z-index: 1000;
     display: flex;
     opacity: .9;
     position: absolute;
