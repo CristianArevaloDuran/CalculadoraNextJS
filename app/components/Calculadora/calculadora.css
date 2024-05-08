@@ -1,13 +1,12 @@
 @import url('../../root.css');
 
 .calculadora {
-    opacity: 0.8;
-    background-color: #fff5;
+    opacity: 0.9;
+    background-color: #c7b5f1;
     padding: 30px;
     border-radius: 40px;
     box-shadow: var(--soft-box-shadow);
     backdrop-filter: blur(100px);
-    backdrop-filter: opacity(.3);
 }
 
 .keys {

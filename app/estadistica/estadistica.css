@@ -41,11 +41,15 @@
     background-color: var(--base-white);
     border-radius: 20px;
     cursor: pointer;
-    transition: all 0.25s;
-    will-change: background-color, box-shadow;
+    transition: all 0.25s, transform .3s;
+    will-change: background-color, box-shadow, transform;
     box-shadow: var(--soft-box-shadow);
     z-index: 2;
     border: 2px solid var(--base-white);
+}
+
+.floatCalc .calcBtn svg.active {
+    transform: rotate(180deg);
 }
 
 .floatCalc .calcBtn svg {
