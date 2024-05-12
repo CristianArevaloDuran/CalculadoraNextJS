@@ -2,7 +2,26 @@
 
 .title {
     font-family: var(--primary-font);
-    font-weight: 500;
+    color: var(--base-white);
+    font-weight: bolder;
     text-align: center;
     margin-bottom: 40px;
+}
+
+.title::selection {
+    background-color: var(--primary-selected-color-1);
+    color: var(--base-white);
+}
+
+.title span {
+    background-color: var(--base-black);
+    padding: 0 10px;
+    border-radius: 10px;
+    margin-left: -5px;
+    color: var(--primary-selected-color-1);
+    font-weight: bolder;
+}
+
+.title span::selection {
+    background-color: transparent;
 }

@@ -1,0 +1,16 @@
+.landContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.landContainer .landTitle {
+  font-size: 50px;
+  font-weight: bolder;
+  color: var(--base-white);
+  font-family: var(--primary-font);
+}

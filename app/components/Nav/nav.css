@@ -1,7 +1,7 @@
 @import url('../../root.css');
 
 .navBtn {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     display: flex;
@@ -45,7 +45,7 @@
 /* Nav content */
 
 .nav-content {
-    position: absolute;
+    position: fixed;
     background-color: var(--base-white);
     box-shadow: var(--soft-box-shadow);
     border-radius: 20px;
@@ -69,9 +69,9 @@
 
 .nav-content h1 {
     cursor: default;
-    font-family: var(--title-font);
+    font-family: var(--primary-font);
     color: var(--base-black);
-    font-size: 20px;
+    font-size: 22px;
     padding: 20px 20px 10px;
     color: var(--primary-color-theme-1);
 }

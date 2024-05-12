@@ -6,7 +6,7 @@ import Calculadora from "../components/Calculadora/Calculadora";
 export default function Home() {
   return (
     <div>
-      <h1 className="title">Calculadora simple</h1>
+      <h1 className="title">Calculadora <span>simple:</span></h1>
       <Calculadora />
     </div>
   );

@@ -29,11 +29,14 @@ export default function Calculadora() {
         display.current.scrollLeft = display.current.scrollWidth;
     }
 
+    const copy = () => {
+        navigator.clipboard.writeText(display.current.value)
+    }
 
     return (
         <div className="calculadora">
             <div className="display">
-                <span className="after" id="copy">
+                <span className="after" id="copy" onClick={copy}>
                     <input value={disVal} type="text" ref={display} disabled />
                 </span>
             </div>

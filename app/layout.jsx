@@ -1,9 +1,14 @@
+'use client';
+
 import Nav from './components/Nav/Nav';
 import Pokemon from './components/Pokemon/Pokemon';
 import './layout.css';
 import './root.css';
+import {usePathname} from 'next/navigation';
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+
   return (
     <html lang="en">
       <head>
@@ -12,7 +17,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className='container'>
           <Nav />
-          <Pokemon />
+          {pathname != '/' && <Pokemon />}
           {children}
         </div>
       </body>

@@ -5,16 +5,254 @@
 
 .container {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .inputContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .inputContainer p {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: var(--base-white);
+    font-family: var(--primary-font);
+}
+
+.container .inputContainer p::selection {
+    background-color: var(--primary-selected-color-1);
+    color: var(--base-white);
+}
+
+.container .inputContainer p span::selection {
+    background-color: transparent;
+}
+
+.container .inputContainer p br::selection {
+    background-color: transparent;
+}
+
+.container .inputContainer p span {
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: var(--primary-selected-color-1);
+    background-color: var(--base-black);
+    padding: 0 10px;
+    box-shadow: var(--soft-box-shadow);
+    border-radius: 10px;
+    margin-left: -3px;
+    font-family: var(--primary-font);
+}
+
+
+.container .inputContainer textarea {
+    padding: 10px;
+    width: 500px;
+    height: 150px;
+    background-color: #f5f5f577;
+    border: 1px solid var(--base-black);
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-family: var(--primary-font);
+    outline: none;
+    box-shadow: var(--soft-box-shadow);
+    border: 5px solid var(--primary-color-btn-theme-1);
+    will-change: background-color, box-shadow, transform;
+    transition: all 0.25s;
+}
+
+.container .inputContainer textarea:focus {
+    border: 5px solid var(--primary-active-color-theme-1);
+    box-shadow: var(--hard-box-shadow);
+    background-color: var(--base-white);
+    transform: scale(1.05);
+}
+
+.container .inputContainer button {
+    padding: 10px 20px;
+    background-color: var(--primary-color-btn-theme-1);
+    color: var(--base-white);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: var(--primary-font);
+    box-shadow: var(--soft-box-shadow);
+    cursor: pointer;
+    will-change: background-color, box-shadow, transform;
+    transition: all 0.25s;
+}
+
+.container .inputContainer button svg {
+    fill: var(--base-white);
+    width: 30px;
+    height: 30px;
+    transition: fill 0.25s;
+    will-change: fill;
+}
+
+.container .inputContainer button:hover {
+    background-color: var(--primary-active-color-theme-1);
+    box-shadow: var(--hard-box-shadow);
+    transform: scale(1.05);
+}
+
+.container.moveUp {
+    justify-content: start;
+}
+
+/* Tabla */
+
+.results {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.results h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    box-shadow: var(--med-box-shadow);
+    margin-bottom: 20px;
+    color: var(--base-white);
+    background-color: var(--base-black);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-family: var(--primary-font);
+}
+
+.results h1::selection {
+    background-color: var(--primary-selected-color-1);
+    color: var(--base-white);
+}
+
+.results .tabla {
+    display: grid;
+    width: 600px;
+    box-shadow: var(--med-box-shadow);
+    border-radius: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    overflow: hidden;
+}
+
+.results .tabla .firstRow {
+    font-size: 15px;
+    font-weight: bolder;
+    color: var(--base-white);
+    background-color: var(--base-black);
+    padding: 10px 20px;
+    text-align: center;
+    font-family: var(--primary-font);
+}
+
+.results .tabla .firstRow::selection {
+    background-color: var(--primary-selected-color-1);
+    color: var(--base-white);
+}
+
+.results .tabla .middle {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--base-black);
+    background-color: var(--base-white);
+    padding: 10px 20px;
+    text-align: center;
+    font-family: var(--primary-font);
+}
+
+.results .tabla .middle::selection {
+    background-color: var(--primary-selected-color-1);
+    color: var(--base-white);
+}
+
+.results .tabla .lastRow {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--base-white);
+    background-color: var(--primary-selected-color-1);
+    padding: 10px 20px;
+    text-align: center;
+    font-family: var(--primary-font);
+}
+
+.results .tabla .lastRow::selection {
+    background-color: var(--base-white);
+    color: var(--base-black);
+}
+
+/* Datos Estadisticos */
+
+.datosEstadisticos {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.datosEstadisticos p {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--base-black);
+    box-shadow: var(--med-box-shadow);
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: var(--base-white);
+    font-family: var(--primary-font);
+}
+
+.datosEstadisticos p::selection {
+    background-color: var(--primary-selected-color-1);
+    color: var(--base-white);
+}
+
+.datosEstadisticos p span {
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: var(--primary-selected-color-1);
+    background-color: var(--base-black);
+    padding: 0 10px;
+    border-radius: 10px;
+    margin-left: -3px;
+    font-family: var(--primary-font);
+}
+
+.datosEstadisticos p span::selection {
+    background-color: var(--primary-selected-color-1);
+    color: var(--base-white);
 }
 
 /* Calculadora */
 
 .floatCalc {
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     left: 10px;
+    z-index: 2000;
 }
 
 .floatCalc .hide {
@@ -22,14 +260,15 @@
     position: absolute;
     pointer-events: none;
     left: -60px;
-    bottom: 80px;
+    bottom: 40px;
+    transform: scale(0.9);
     transition: all 0.25s;
 }
 
 .floatCalc .hide.active {
     opacity: 1;
     pointer-events: all;
-    left: 10px;
+    left: -15px;
 }
 
 .floatCalc .calcBtn {
