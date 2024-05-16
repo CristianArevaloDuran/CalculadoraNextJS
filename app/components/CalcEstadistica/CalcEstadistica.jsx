@@ -1,8 +1,8 @@
 'use client'
-import React from "react";
+import React, {useEffect} from "react";
 
 export default function CalcEstadistica({data}) {
-   
+
     const datos = data.reduce((acc, item) => {
         const existingItem = acc.find((stat) => stat.number === item);
         if (existingItem) {
@@ -25,6 +25,8 @@ export default function CalcEstadistica({data}) {
     const median = sortedData.length % 2 === 0
         ? (sortedData[sortedData.length / 2] + sortedData[(sortedData.length / 2) - 1]) / 2
         : sortedData[Math.floor(sortedData.length / 2)];
+
+    console.log(sortedData);
 
     return (
         <div>
@@ -58,6 +60,9 @@ export default function CalcEstadistica({data}) {
                             <p><span>Media:</span> {(totalNumber/totalTimes).toFixed(2)}</p>
                             <p><span>Mediana:</span> {median} </p>
                             <p><span>Moda:</span> {datos.reduce((acc, item) => item.times > acc.times ? item : acc).number}</p>
+                        </div>
+                        <div className="graphs">
+
                         </div>
                     </div>
                 : null
