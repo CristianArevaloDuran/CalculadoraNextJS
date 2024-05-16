@@ -10,9 +10,10 @@ export default function RootLayout({ children }) {
   const pathname = usePathname();
 
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <title>Calculadora</title>
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
       </head>
       <body>
         <div className='container'>

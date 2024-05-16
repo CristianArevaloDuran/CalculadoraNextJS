@@ -16,11 +16,12 @@ export default function CalcEstadistica({data}) {
         return acc;
     }, []).sort((a, b) => a.number - b.number);
 
+    const sortedData = data.map(item => item).sort((a, b) => a - b);
+    
     const totalTimes = datos.reduce((acc, item) => acc + item.times, 0);
     const totalNumber = datos.reduce((acc, item) => acc + (item.number * item.times), 0);
     const totalPercentage = datos.reduce((acc, item) => acc + (item.times / totalTimes), 0).toFixed(2);
 
-    const sortedData = data.map(item => item).sort((a, b) => a - b);
     const median = sortedData.length % 2 === 0
         ? (sortedData[sortedData.length / 2] + sortedData[(sortedData.length / 2) - 1]) / 2
         : sortedData[Math.floor(sortedData.length / 2)];

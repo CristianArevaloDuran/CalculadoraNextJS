@@ -17,6 +17,10 @@ const links = [
     {
         name: 'Estadistica',
         url: '/estadistica',
+    },
+    {
+        name: 'Física',
+        url: '/fisica',
     }
 ];
 
