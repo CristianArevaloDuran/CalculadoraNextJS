@@ -1,0 +1,205 @@
+@import url('../root.css');
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .title {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: var(--base-white);
+    font-family: var(--primary-font);
+    position: relative;
+}
+
+.container .title select {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: var(--primary-active-color-theme-1);
+    font-family: var(--primary-font);
+    background-color: var(--base-black);
+    box-shadow: var(--med-box-shadow);
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+.container .title select option {
+    background-color: var(--base-black);
+    color: var(--base-white);
+    font-family: var(--primary-font);
+    font-weight: bolder;
+} 
+
+.container .converter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--base-white);
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: var(--hard-box-shadow);
+}
+
+.container .converter h2 {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    color: var(--primary-active-color-theme-1);
+    box-shadow: var(--med-box-shadow);
+    background-color: var(--base-black);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: var(--primary-font);
+    position: relative;
+}
+
+.container .converter .unitContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .converter .unitContainer .equalSign {
+    display: flex;
+    background-color: var(--base-black);
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    box-shadow: var(--med-box-shadow);
+}
+
+.container .converter .unitContainer .equalSign svg{
+    width: 70px;
+    height: 70px;
+}
+
+.container .converter .unitContainer .equalSign svg path {
+    fill: var(--base-white);
+}
+
+.container .converter .unitContainer .from , .to {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--soft-box-shadow);
+    border-radius: 10px;
+}
+
+.container .converter .unitContainer .from input, .to input {
+    font-size: 20px;
+    font-weight: bolder;
+    color: var(--base-white);
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--base-white);
+    outline: none;
+    background-color: var(--base-black);
+    font-family: var(--primary-font);
+    padding: 5px 10px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: var(--med-box-shadow);
+    transition: border-bottom-color 0.25s;
+    will-change: bporder-bottom-color;
+}
+
+.container .converter .unitContainer .from input:focus, .to input:focus {
+    border-bottom-color: var(--primary-active-color-theme-1);
+}
+
+.container .converter .unitContainer .from input::-webkit-inner-spin-button , .to input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container .converter .unitContainer .from select, .to select {
+    font-size: 20px;
+    font-weight: bolder;
+    color: var(--base-white);
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--base-black);
+    font-family: var(--primary-font);
+    border-radius: 0 0 10px 10px;
+    padding: 5px 10px;
+}
+
+
+/* Calculadora */
+
+.floatCalc {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2000;
+}
+
+.floatCalc .hide {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    left: -60px;
+    bottom: 40px;
+    transform: scale(0.9);
+    transition: all 0.25s;
+}
+
+.floatCalc .hide.active {
+    opacity: 1;
+    pointer-events: all;
+    left: -15px;
+}
+
+.floatCalc .calcBtn {
+    display: flex;
+    width: 60px;    
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--base-white);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.25s, transform .3s;
+    will-change: background-color, box-shadow, transform;
+    box-shadow: var(--soft-box-shadow);
+    z-index: 2;
+    border: 2px solid var(--base-white);
+}
+
+.floatCalc .calcBtn svg.active {
+    transform: rotate(180deg);
+}
+
+.floatCalc .calcBtn svg {
+    fill: var(--base-black);
+    width: 30px;
+    height: 30px;
+    transition: fill 0.25s, transform 0.45s;
+    will-change: fill;
+}
+
+.floatCalc .calcBtn:hover {
+    background-color: var(--primary-active-color-theme-1);
+    box-shadow: var(--hard-box-shadow);
+    transform: translateY(-3px);
+}
+
+.floatCalc .calcBtn:hover svg {
+    fill: var(--base-white);
+}

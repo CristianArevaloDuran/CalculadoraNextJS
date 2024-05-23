@@ -33,8 +33,6 @@ export default function Calculadora() {
         navigator.clipboard.writeText(display.current.value)
     }
 
-    console.log(display.current);
-
     return (
         <div className="calculadora">
             <div className="display">
