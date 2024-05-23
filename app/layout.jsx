@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <head>
         <title>Calculadora</title>
-        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.png" />
       </head>
       <body>
         <div className='container'>
