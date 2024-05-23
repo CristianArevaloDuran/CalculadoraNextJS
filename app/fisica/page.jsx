@@ -1,3 +1,5 @@
+import './fisica.css';
+
 export default function Fisica() {
     return (
         <div>

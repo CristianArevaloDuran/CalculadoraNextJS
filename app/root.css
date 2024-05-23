@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'Pokemon';
-    src: url('../public/PocketMonk-15ze.ttf') format('truetype');
+    src: url('/PocketMonk-15ze.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Title';
-    src: url('../public/SouthParkSmilieVersion-YVVO.ttf') format('truetype');
+    src: url('/SouthParkSmilieVersion-YVVO.ttf') format('truetype');
 }
 
 :root {

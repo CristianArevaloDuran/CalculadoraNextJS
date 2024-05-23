@@ -33,10 +33,12 @@ export default function Calculadora() {
         navigator.clipboard.writeText(display.current.value)
     }
 
+    console.log(display.current);
+
     return (
         <div className="calculadora">
             <div className="display">
-                <span className="after" id="copy" onClick={copy}>
+                <span className="after" onClick={copy}>
                     <input value={disVal} type="text" ref={display} disabled />
                 </span>
             </div>
